@@ -1,20 +1,9 @@
-:root{
-    overflow-x:hidden;
-}
+@import '../base/layout.css';
+@import '../base/base.css';
+@import '../3rd-party/font-awesome.min.css';
+@import '../3rd-party/flag-icons.min.css';
+@import '../components/custom_scroll.css';
 
-body{
-    font-family: sans-serif;
-    color: white;
-    margin: 0;
-}
-
-header.container{
-    background-color: rgb(15, 123, 190);
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 2px solid black;
-}
 
 .logo{  
     width: 80px;
@@ -104,12 +93,6 @@ hr.header-line{
 }
 
 /*==================================== Main ====================================*/
-
-.main-container{
-    display: flex;
-    height: 500px;
-}
-
 .left-item{
     background-color:rgb(19, 52, 89);
     text-align: center;
@@ -210,19 +193,6 @@ ins{
     gap:20px;
 }
 
-.gallery-container::-webkit-scrollbar{
-    border: 2px solid white;
-    border-radius: 9999px;
-    background-color: black;
-}
-
-.gallery-container::-webkit-scrollbar-thumb{
-    color: white;
-    background-color: white;
-    border-radius: 99999px;
-}
-
-
 .gallery-item{
     display: flex;
     justify-self: center;
@@ -302,14 +272,6 @@ ins{
 }
 
 /*==================================== Footer ====================================*/
-footer.container{
-    background-image: linear-gradient(rgb(19, 52, 89), 
-                                      rgb(3, 11, 20)); 
-    height:100px; 
-    width: 100%; 
-    text-align: center;
-}
-
 .social-img{
     font-size: 40px;
     margin: 0 15px;

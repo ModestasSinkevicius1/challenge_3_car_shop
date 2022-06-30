@@ -1,0 +1,9 @@
+:root{
+    overflow-x:hidden;
+}
+
+body{
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+}

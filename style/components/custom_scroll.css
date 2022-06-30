@@ -1,0 +1,11 @@
+.gallery-container::-webkit-scrollbar{
+    border: 2px solid white;
+    border-radius: 9999px;
+    background-color: black;
+}
+
+.gallery-container::-webkit-scrollbar-thumb{
+    color: white;
+    background-color: white;
+    border-radius: 99999px;
+}

@@ -2,6 +2,7 @@
 @import '../base/base.css';
 @import '../3rd-party/font-awesome.min.css';
 @import '../3rd-party/flag-icons.min.css';
+@import '../components/filter.css';
 @import '../components/custom_scroll.css';
 
 
@@ -170,16 +171,6 @@ hr.header-line{
 .btn-search:hover{
     cursor: pointer;
 }
-.filter{
-    margin: 0;
-    padding: 10px 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
-
-ins{
-    margin:10px;
-}
 
 .gallery-container{
     display: grid;
@@ -188,7 +179,7 @@ ins{
     margin: 0 17px 0 0;
     flex-wrap: wrap;
     justify-content: center;
-    height: 78.5%;
+    height: 53%;
     overflow-y:scroll;
     gap:20px;
 }

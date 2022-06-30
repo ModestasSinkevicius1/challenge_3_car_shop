@@ -115,7 +115,7 @@ hr.header-line{
     color: white;
     background-color: rgb(0, 65, 139);
     margin: 0;
-    text-align: le;
+    text-align: center;
 }
 
 .category-list>a{
@@ -179,7 +179,7 @@ hr.header-line{
     margin: 0 17px 0 0;
     flex-wrap: wrap;
     justify-content: center;
-    height: 53%;
+    height: 68.5%;
     overflow-y:scroll;
     gap:20px;
 }
@@ -280,6 +280,9 @@ hr.header-line{
     .ad-container{
         display: none;
     }
+    .gallery-container{        
+        height: 62%;
+    }
 }
 
 @media(max-width: 960px){
@@ -299,6 +302,13 @@ hr.header-line{
     }
     .logo-container>h1{
         font-size: 20px;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .gallery-container{        
+        height: 49.5%;
     }
 }
 

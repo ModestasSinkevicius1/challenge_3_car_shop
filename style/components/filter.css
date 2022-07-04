@@ -1,0 +1,54 @@
+.filter-container{
+    margin: 0;
+    padding: 0 20px 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.filter-title{
+    display:block;
+    width: 100%;
+}
+
+.filter-container>form{
+    display: grid;
+    gap: 10px;
+}
+
+.filter-container>form>div{
+    justify-self: flex-end;
+}
+
+.filter-container>form>div>select{
+    width: 180px;
+}
+.filter-container>form>input[name="btn-apply"]{  
+    margin-top: 5px;
+    grid-column-start: 4 span;
+    justify-self: self-end; 
+    padding: 10px 30px;
+    height: 45px;
+    background-color: #042c5b;
+    color: white;
+    font-weight: bold;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+@media (max-width:1200px){
+    .select-3{
+        grid-column-start: 1;
+    }
+    .filter-container>form>div>select{
+        width: 230px;
+    }
+}
+
+@media (max-width:800px){
+    .filter-container>form>div{
+        justify-self: center;
+        grid-column: 1/5;
+    }
+    .filter-container>form>input[name="btn-apply"]{
+        justify-self: center;
+    }
+}

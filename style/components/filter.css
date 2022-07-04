@@ -31,6 +31,7 @@
     color: white;
     font-weight: bold;
     border-radius: 35px;
+    cursor: pointer;
 }
 
 @media (max-width:1200px){

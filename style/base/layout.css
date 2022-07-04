@@ -8,7 +8,7 @@ header.container{
 
 .main-container{
     display: flex;
-    height: 500px;
+    height: 750px;
 }
 
 footer.container{
@@ -17,4 +17,5 @@ footer.container{
     height:100px; 
     width: 100%; 
     text-align: center;
+    padding-top: 20px;
 }

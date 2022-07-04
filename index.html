@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Shop</title>
     <link rel="stylesheet" href="./style/pages/home.css">
-    
 </head>
 <body>
     <header class="container">
@@ -66,7 +65,49 @@
                 </form>
                 <button type="button" name="submit_button" class="fa fa-search btn-search" form="form-search" value="Search">
             </div>
-            <h2 class="filter"><ins>Filter</ins></h2>
+            <div class="filter-container">
+                <h2 class="filter-title"><ins>Filter</ins></h2>
+                <form>
+                    <div class="select-1">
+                        <label for="sort">Sort:</label><br>     
+                        <select id="sort" name="sort">
+                            <option value="Relevant">Relevant</option>
+                            <option value="New">New</option>
+                            <option value="Ascend">Ascend</option>
+                            <option value="Descend">Descend</option>
+                        </select>
+                    </div>
+                    <div class="select-2">
+                        <label for="c-type">Type:</label><br>
+                        <select id="c-type" name="c-type">
+                            <option value="Both">Both</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Mechanical">Non-mechanical</option>
+                        </select>
+                    </div>
+                    <div class="select-3">
+                        <label for="price-gap">Price:</label><br>
+                        <select id="price-gap" name="price-gap">
+                            <option value="any">Any</option>
+                            <option value="500 - 1500">500 - 1500 &euro;</option>
+                            <option value="1500 - 2500">1500 - 2500 &euro;</option>
+                            <option value="2500 - 3500">2500 - 3500 &euro;</option>
+                            <option value="3500 - 4500">3500 - 4500 &euro;</option>
+                            <option value="4500 - 6000">4500 - 6000 &euro;</option>
+                        </select>
+                    </div>
+                    <div class="select-4">
+                    <label for="c-age">Vehicle age:</label><br>
+                    <select id="c-age" name="c-type">
+                        <option value="Any">Any</option>
+                        <option value="1 - 3 years">1 - 3 years</option>
+                        <option value="3 - 5 years">3 - 5 years</option>
+                        <option value="5 - 10 years">5 - 10 years</option>
+                    </select>
+                    </div>
+                    <input type="button" name="btn-apply" id="btn-apply" value="Apply">
+                </form>
+            </div>
             <div class="gallery-container">
                 <div class="gallery-item">
                     <img src="./img/tractor.jpg">
@@ -78,9 +119,17 @@
                     <p>1500&euro;</p>
                     <hr>
                     <div class="rating">
-                        <p class="fa fa-comment comment"> 0</p>
-                        <p class="fa fa-star favorite"></p>
-                        <p class="fa fa-thumbs-up like"> 0</p>                  
+                        <div class="comment-container">
+                            <i class="fa fa-comment comment"></i>
+                            <p class="comment-txt">0</p>
+                        </div>
+                        <div class="favorite-container">
+                            <i class="fa fa-star favorite"></i>
+                        </div>
+                        <div class="like-container">
+                            <i class="fa fa-thumbs-up like"></i>
+                            <p class="like-txt">0</p>
+                        </div>                  
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -93,9 +142,17 @@
                     <p>1500&euro;</p>
                     <hr>
                     <div class="rating">
-                        <p class="fa fa-comment comment"> 0</p>
-                        <p class="fa fa-star favorite"></p>
-                        <p class="fa fa-thumbs-up like"> 0</p>                  
+                        <div class="comment-container">
+                            <i class="fa fa-comment comment"></i>
+                            <p class="comment-txt">0</p>
+                        </div>
+                        <div class="favorite-container">
+                            <i class="fa fa-star favorite"></i>
+                        </div>
+                        <div class="like-container">
+                            <i class="fa fa-thumbs-up like"></i>
+                            <p class="like-txt">0</p>
+                        </div>                  
                     </div>
                 </div><div class="gallery-item">
                     <img src="./img/tractor.jpg">
@@ -107,9 +164,17 @@
                     <p>1500&euro;</p>
                     <hr>
                     <div class="rating">
-                        <p class="fa fa-comment comment"> 0</p>
-                        <p class="fa fa-star favorite"></p>
-                        <p class="fa fa-thumbs-up like"> 0</p>                  
+                        <div class="comment-container">
+                            <i class="fa fa-comment comment"></i>
+                            <p class="comment-txt">0</p>
+                        </div>
+                        <div class="favorite-container">
+                            <i class="fa fa-star favorite"></i>
+                        </div>
+                        <div class="like-container">
+                            <i class="fa fa-thumbs-up like"></i>
+                            <p class="like-txt">0</p>
+                        </div>                  
                     </div>
                 </div><div class="gallery-item">
                     <img src="./img/tractor.jpg">
@@ -121,9 +186,17 @@
                     <p>1500&euro;</p>
                     <hr>
                     <div class="rating">
-                        <p class="fa fa-comment comment"> 0</p>
-                        <p class="fa fa-star favorite"></p>
-                        <p class="fa fa-thumbs-up like"> 0</p>                  
+                        <div class="comment-container">
+                            <i class="fa fa-comment comment"></i>
+                            <p class="comment-txt">0</p>
+                        </div>
+                        <div class="favorite-container">
+                            <i class="fa fa-star favorite"></i>
+                        </div>
+                        <div class="like-container">
+                            <i class="fa fa-thumbs-up like"></i>
+                            <p class="like-txt">0</p>
+                        </div>                  
                     </div>
                 </div><div class="gallery-item">
                     <img src="./img/tractor.jpg">
@@ -135,9 +208,17 @@
                     <p>1500&euro;</p>
                     <hr>
                     <div class="rating">
-                        <p class="fa fa-comment comment"> 0</p>
-                        <p class="fa fa-star favorite"></p>
-                        <p class="fa fa-thumbs-up like"> 0</p>                  
+                        <div class="comment-container">
+                            <i class="fa fa-comment comment"></i>
+                            <p class="comment-txt">0</p>
+                        </div>
+                        <div class="favorite-container">
+                            <i class="fa fa-star favorite"></i>
+                        </div>
+                        <div class="like-container">
+                            <i class="fa fa-thumbs-up like"></i>
+                            <p class="like-txt">0</p>
+                        </div>                  
                     </div>
                 </div><div class="gallery-item">
                     <img src="./img/tractor.jpg">
@@ -149,9 +230,17 @@
                     <p>1500&euro;</p>
                     <hr>
                     <div class="rating">
-                        <p class="fa fa-comment comment"> 0</p>
-                        <p class="fa fa-star favorite"></p>
-                        <p class="fa fa-thumbs-up like"> 0</p>                  
+                        <div class="comment-container">
+                            <i class="fa fa-comment comment"></i>
+                            <p class="comment-txt">0</p>
+                        </div>
+                        <div class="favorite-container">
+                            <i class="fa fa-star favorite"></i>
+                        </div>
+                        <div class="like-container">
+                            <i class="fa fa-thumbs-up like"></i>
+                            <p class="like-txt">0</p>
+                        </div>                  
                     </div>
                 </div>
             </div>    

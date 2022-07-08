@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style/pages/user_input.css">
+</head>
+<body>
+    <header class="container" id="header-container">
+        <div class="logo-container">
+            <img src="./img/car_logo.png" alt="Car logo" class="logo">
+            <h1>Car shop</h1>
+        </div>
+        <div class="nav-link-container">
+            <nav class="header-nav">
+                <a href="#">Log in</a>
+                <a href="#">About</a>
+                <a href="#">Contacts</a>
+                <a href="#">Help</a>
+                <hr class="header-line">
+            </nav>
+            <div class="nav-icon-container">
+                <a href="javascript:void(0);" class="fa fa-moon-o header-mode" onclick="changeMode()"></a>
+                <a href="#" class="fa fa-wheelchair header-mode"></a>
+            </div>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="login-box">
+            <h2>Register</h2>
+            <form action="./register" id="register-form" method="post">
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" name="email-input" class="input-box">
+                <label for="email-input">Password:</label>
+                <input type="password" id="pass-input" name="pass-input" class="input-box">
+                <label for="pass-confirm-input">Confirm password:</label>
+                <input type="password" id="pass-confirm-input" name="pass-input" class="input-box">
+                <label for="nick-input">Nickname:</label>
+                <input type="text" id="nick-input" name="pass-input" class="input-box">
+            </form>
+            <p>Already have account? Click <a href="./login.html">here</a>.</p>
+            <input type="button" form="register-form" value="Confirm" onclick="verify_user_inputs(this.form)">
+        </div>
+    </main>
+    <footer class="container">
+        <a href="#" class="fa fa-facebook social-img"></a>
+        <a href="#" class="fa fa-twitter social-img"></a>       
+        <a href="#" class="fa fa-instagram social-img"></a>
+        <a href="#" class="fa fa-linkedin social-img"></a>        
+        <p>&#169; Anonymous</p>
+    </footer>
+    <script src="./js/mode.js"></script>
+    <script src="./js/user_input.js"></script>
+</body>
+</html>

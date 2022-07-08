@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="./style/pages/home.css">
 </head>
 <body>
-    <header class="container">
+    <header class="container" id="header-container">
         <div class="logo-container">
             <img src="./img/car_logo.png" alt="Car logo" class="logo">
             <h1>Car shop</h1>
         </div>
         <div class="nav-link-container">
             <nav class="header-nav">
-                <a href="#">Log in</a>
+                <a href="./login.html">Log in</a>
                 <a href="#">About</a>
                 <a href="#">Contacts</a>
                 <a href="#">Help</a>
                 <hr class="header-line">
             </nav>
             <div class="nav-icon-container">
-                <a href="#" class="fa fa-moon-o header-mode"></a>
+                <a href="javascript:void(0);" class="fa fa-moon-o header-mode" onclick="changeMode()"></a>
                 <a href="#" class="fa fa-wheelchair header-mode"></a>
             </div>
         </div>
@@ -258,5 +258,6 @@
         <a href="#" class="fa fa-linkedin social-img"></a>        
         <p>&#169; Anonymous</p>
     </footer>
+    <script src="./js/mode.js"></script>
 </body>
 </html>

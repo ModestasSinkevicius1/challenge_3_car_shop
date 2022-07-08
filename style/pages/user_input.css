@@ -1,0 +1,61 @@
+@import '../base/layout.css';
+@import '../base/base.css';
+@import '../3rd-party/font-awesome.min.css';
+@import '../3rd-party/flag-icons.min.css';
+@import '../components/filter.css';
+@import '../components/custom_scroll.css';
+@import '../utilities/animation.css';
+@import '../base/global.css';
+
+.login-box{
+    height: 500px;
+    width: 380px;
+    background-color:#1E538F;
+    text-align: center;
+    position: relative;
+}
+
+.login-box a{
+    color: white;
+}
+
+.login-box p{
+    text-align: left;
+    margin-left: 25px;
+}
+
+form{
+    display: inline-block;
+}
+
+label, .input-box{
+    display: block;
+    text-align: left;
+}
+
+.input-box{
+    margin-bottom: 25px;
+    border-radius: 0;
+    border-style: none;
+    height: 30px;
+    width: 320px;
+    padding: 0 5px;
+    outline: none;
+}
+
+input[type="button"]{
+    background-color: #205bb2;
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+    bottom:20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.main-container{
+    justify-content: center;
+    align-items: center;
+}

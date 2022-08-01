@@ -7,6 +7,4 @@ function verify_user_inputs(){
         console.log('bad email');
     else
         console.log('good email');
-
-    
 }

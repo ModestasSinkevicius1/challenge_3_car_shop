@@ -22,7 +22,7 @@
                 <hr class="header-line">
             </nav>
             <div class="nav-icon-container">
-                <a href="javascript:void(0);" class="fa fa-moon-o header-mode" onclick="changeMode()"></a>
+                <a href="#" class="fa fa-moon-o header-mode" id="mode-changer"></a>
                 <a href="#" class="fa fa-wheelchair header-mode"></a>
             </div>
         </div>
@@ -38,7 +38,7 @@
             </form>
             <p>Don’t have account? Click on <a href="./register.html">register</a>.</p>
             <p>If you forgot password click <a href="./pass_reset.html">here</a>.</p>
-            <input type="button" form="login-form" value="Confirm">
+            <input type="button" form="login-form" value="Confirm" id="user_submit">
         </div>
     </main>
     <footer class="container">
@@ -48,6 +48,7 @@
         <a href="#" class="fa fa-linkedin social-img"></a>        
         <p>&#169; Anonymous</p>
     </footer>
-    <script src="./js/mode.js"></script>
+    <script src="./js/mode.js" type="module" defer></script>
+    <script src="./js/user_input.js" type="module" defer></script>
 </body>
 </html>

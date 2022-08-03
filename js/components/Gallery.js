@@ -29,17 +29,37 @@ class Gallery{
         return strValue.split(' - ');
     }
 
+    sortItems(filter){
+        const arrayData = [...this.data];
+        if(filter.sort === 'new'){
+            let temp = null;
+
+            for(let j = 0;j < arrayData.length;j++){
+                for(let i = j + 1 ;i < arrayData.length; i++){
+                    if(arrayData[j].age > arrayData[i].age){
+                        temp = arrayData[j];
+                        arrayData[j] = arrayData[i];
+                        arrayData[i] = temp;
+                    }
+                }
+            }
+        }
+        console.log(this.data[1].age, arrayData[1].age);
+        return arrayData;
+    }
+
     renderGallery(){
         this.DOM = document.querySelector(this.selector);
         let HTML = '';
 
-        this.setDefault(this.filter);
+        this.setDefault(this.filter);  
+        const sortedData = this.sortItems(this.filter);
 
         const price = this.splitTwoValues(this.filter.price);
         const age = this.splitTwoValues(this.filter.age);
 
-        for(let i = 0;i<25;i++){
-            const galleryData = this.data[0];
+        for(let i = 0;i<this.data.length;i++){
+            const galleryData = sortedData[i];
             if((galleryData.mechanical === this.filter.type || this.filter.type === 'both')&&
             ((galleryData.initial_price >= price[0] && galleryData.initial_price <= price[1]) || this.filter.price === 'any')&&
             (galleryData.age >= age[0] && galleryData.age <= age[1] || this.filter.age === 'any')){

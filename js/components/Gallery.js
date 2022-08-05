@@ -31,9 +31,11 @@ class Gallery{
 
     sortItems(filter){
         const arrayData = [...this.data];
+
         if(filter.sort === 'new'){
             let temp = null;
-
+            
+            //Bubble Sort algorithm
             for(let j = 0;j < arrayData.length;j++){
                 for(let i = j + 1 ;i < arrayData.length; i++){
                     if(arrayData[j].age > arrayData[i].age){
@@ -44,7 +46,9 @@ class Gallery{
                 }
             }
         }
-        console.log(this.data[1].age, arrayData[1].age);
+        if(filter.order === 'descend'){
+            arrayData.reverse();
+        }
         return arrayData;
     }
 

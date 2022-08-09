@@ -1,6 +1,7 @@
 import { Filter } from "../components/Filter.js";
 import { Gallery } from "../components/Gallery.js";
 import { galleryData } from "../data/galleryData.js";
+import { changeMode, loadCookies } from "../mode.js";
 
 const filter = {
     sort: undefined,
@@ -28,15 +29,28 @@ function updateFilter(){
 }
 
 const g = new Gallery(galleryData, '#gallery_container', filter);
-const f = new Filter('#filter_form');
+const f = new Filter('#filter_form', '#gallery_container');
+
+//Filter apply button
 
 const btnEvent = document.querySelector('#btn-apply');
 btnEvent.addEventListener('click', updateFilter);
+
+//Filter expander
 
 const expandEvent = document.querySelector('#filter_expander');
 expandEvent.addEventListener('click', () => f.expandFilter());
 
 window.addEventListener('resize', () => f.resizeFilter());
+window.addEventListener('resize', () => f.resizeGallery());
+
+//Night/Day mode
+
+const modeEvent = document.querySelector('#mode-changer')
+
+loadCookies();
+
+modeEvent.addEventListener('click', changeMode)
 
 
 

@@ -93,7 +93,7 @@
     margin: 0 17px 0 0;
     flex-wrap: wrap;
     justify-content: center;
-    height: 68.5%;
+    height: 85.8%;
     overflow-y:scroll;
     gap:10px;
 }
@@ -198,7 +198,7 @@
         display: none;
     }
     .gallery-container{        
-        height: 62%;
+        height: 85.8%;
     }
 }
 
@@ -211,7 +211,7 @@
 @media (max-width: 800px)
 {
     .gallery-container{        
-        height: 49.5%;
+        height: 85.8%;
     }
 }
 

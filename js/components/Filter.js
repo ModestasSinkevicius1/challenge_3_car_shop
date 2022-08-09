@@ -1,8 +1,10 @@
 class Filter{
-    constructor(selector){
+    constructor(selector, gallerySelector){
         this.selector = selector;
+        this.gallerySelector = gallerySelector;
         this.toggle = true;
         this.filterBlock = document.querySelector(this.selector);
+        this.galleryBlock = document.querySelector(this.gallerySelector);
     }
 
     expandFilter(){
@@ -17,6 +19,7 @@ class Filter{
             this.toggle = true;
         }
         this.resizeFilter();
+        this.resizeGallery();
     }
 
     resizeFilter(){
@@ -26,6 +29,17 @@ class Filter{
             this.filterBlock.style.height = '170px';
         else if(!this.toggle)
             this.filterBlock.style.height = '125px';
+    }
+
+    resizeGallery(){
+        if(window.innerWidth < 800 && !this.toggle)
+            this.galleryBlock.style.height = '48.5%';
+        else if(window.innerWidth < 1200 && !this.toggle)
+            this.galleryBlock.style.height = '62.0%';
+        else if(!this.toggle)
+            this.galleryBlock.style.height = '68.0%';
+        else
+            this.galleryBlock.style.height = '85.8%';
     }
 }
 

@@ -36,20 +36,34 @@ class Gallery{
             let temp = null;
             
             //Bubble Sort algorithm
-            for(let j = 0;j < arrayData.length;j++){
-                for(let i = j + 1 ;i < arrayData.length; i++){
-                    if(arrayData[j].age > arrayData[i].age){
-                        temp = arrayData[j];
-                        arrayData[j] = arrayData[i];
-                        arrayData[i] = temp;
-                    }
-                }
-            }
+            // for(let j = 0;j < arrayData.length;j++){
+            //     for(let i = j + 1 ;i < arrayData.length; i++){
+            //         if(arrayData[j].age > arrayData[i].age){
+            //             temp = arrayData[j];
+            //             arrayData[j] = arrayData[i];
+            //             arrayData[i] = temp;
+            //         }
+            //     }
+            // }
+
+            arrayData.sort((a, b) => a.age - b.age);
         }
         if(filter.order === 'descend'){
             arrayData.reverse();
         }
         return arrayData;
+    }
+
+    checkFilter(galleryData, price, age){
+        if ((galleryData.mechanical === this.filter.type || this.filter.type === 'both')&&
+           ((galleryData.initial_price >= price[0] && galleryData.initial_price <= price[1]) || this.filter.price === 'any')&&
+            (galleryData.age >= age[0] && galleryData.age <= age[1] || this.filter.age === 'any')&&
+            (galleryData.model === this.filter.search || '' === this.filter.search )){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     renderGallery(){
@@ -64,9 +78,7 @@ class Gallery{
 
         for(let i = 0;i<this.data.length;i++){
             const galleryData = sortedData[i];
-            if((galleryData.mechanical === this.filter.type || this.filter.type === 'both')&&
-            ((galleryData.initial_price >= price[0] && galleryData.initial_price <= price[1]) || this.filter.price === 'any')&&
-            (galleryData.age >= age[0] && galleryData.age <= age[1] || this.filter.age === 'any')){
+            if(this.checkFilter(galleryData, price, age)){
                 HTML += `<div class="gallery-item">
                             <img src=${galleryData.image}>
                             <div class="flag-container">
